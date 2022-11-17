@@ -55,7 +55,7 @@ function HomePage() {
           <Link to="/news">Show more</Link>
         </Title>
       </div>
-      <News simplified />
+      <News simplified={true} />
       {/* above can be written as <News simplified={true} /> as well*/}
       {/* pass simplified version of both news and crypto currencies by passing props "simplified"  */}
     </>

@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Link,
-  Route,
-  // Link,
-  Routes,
-} from "react-router-dom";
-
+import { Link, Route, Routes } from "react-router-dom";
 import { Layout, Space, Typography } from "antd";
 import { Navbar, Exchanges, HomePage, CryptoDetails, Cryptocurrencies, News } from "./components";
 import "./App.css";

@@ -15,6 +15,7 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 ); // pass the App component to the render method
+
 // along with document.getElementById("root") as the second argument to hook our app to the root element in our index.html file
 
 // to use links and oteher things, wrap app with router
