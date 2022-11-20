@@ -20,11 +20,16 @@ export const cryptoApi = createApi({
     getCryptoDetails: builder.query({
       query: (coinId) => createRequest(`/coin/${coinId}`),
     }),
+    // Note: Change the coin price history endpoint from this - `coin/${coinId}/history/${timeperiod} to this - `coin/${coinId}/history?timeperiod=${timeperiod}`
+    getCryptoHistory: builder.query({
+      query: ({ coinId, timeperiod }) =>
+        createRequest(`coin/${coinId}/history?timeperiod=${timeperiod}`),
+    }),
   }),
 });
 
 // hook to call instantly the data for your query along with loading and error states
-export const { useGetCryptosQuery, useGetCryptoDetailsQuery } = cryptoApi; // this is a hook that we can use to get data from the endpoint
+export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } = cryptoApi; // this is a hook that we can use to get data from the endpoint
 // follow this convention of "use" before and "Query" after the name of the endpoint
 
 // getCryptos is the endpoint where /coins is the endpoint
